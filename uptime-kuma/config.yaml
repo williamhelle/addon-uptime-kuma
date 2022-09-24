@@ -17,3 +17,23 @@ ports:
   3001/tcp: 3001
 ports_description:
   3001/tcp: Web interface
+options:
+  envvars: []
+  ssl: false
+  certfile: fullchain.pem
+  keyfile: privkey.pem
+schema:
+  remote_mysql_host: str?
+  remote_mysql_database: str?
+  remote_mysql_username: str?
+  remote_mysql_password: password?
+  remote_mysql_port: int?
+  show_appkey: bool?
+  appkey: str?
+  log_level: list(trace|debug|info|notice|warning|error|fatal)?
+  certfile: str
+  keyfile: str
+  ssl: bool
+  envvars:
+    - name: str
+      value: str
